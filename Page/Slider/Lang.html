@@ -1,0 +1,178 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Язык программирования C#</title>
+    <!-- Подключаем шрифт Montserrat с Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+    <!-- Подключаем файл со стилями CSS -->
+    <link rel="stylesheet" href="/Design/ProgaMasha.css">
+    <link rel="stylesheet" href="/Design/Button.css">
+    <script src="/Script/Button.js"></script>
+    <link rel="shortcut icon" href="/Image/Logo.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <button onclick="location.href='/Main.html'" style="background-color: #ffffff00; border: 0;"> <!-- Вернуться на гл. страницу через клик по картинке-->
+                <img src="/Image/JoyStick2.png" alt="Логотип" class="logo">    
+            </button>
+            <div class="dropdown">
+                <div class="dropdown">
+                    <button onclick="myFunction2()" class="dropbtn">Тесты</button>
+                    <div id="myDropdown2" class="dropdown-content">
+                    <ul>
+                        <li><a href="/Page/GitHub.html">GitHub</a></li>
+                        <li><a href="/Page/Lang.html">C#</a></li>
+                        <li><a href="/Page/Unity.html">Unity</a></li>
+                    </ul>
+                    </div>
+                </div> 
+                <div class="dropdown">    
+                    <button onclick="myFunction()" class="dropbtn">Темы</button>
+                    <div id="myDropdown" class="dropdown-content">
+                    <ul>
+                        <li><a href="/Page/Slider/Unity.html">Unity</a></li>
+                        <li><a href="/Page/Slider/GitHub.html">GitHub</a></li>
+                        <li><a href="/Page/Slider/Lang.html">C#</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="card">
+                <div id="Intro">
+                    <h1>Как программировать в C#</h1>
+                    <p>В этом курсе вы научитесь, как программировать на C#, одном из самых популярных и мощных языков для разработки приложений. Вы узнаете, как создавать переменные, методы, классы, объекты, интерфейсы, наследование, полиморфизм, абстракцию, коллекции, циклы, исключения и файлы.</p>            
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_8yZYhAkQjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>Курс состоит из нескольких уроков, в каждом из которых вы будете изучать новые аспекты программирования на C#. В конце каждого урока вы найдете задания, которые помогут вам практиковать использование C# и разработку различных приложений. Также вы сможете получить доступ к коду и ресурсам, которые использовались в уроке. Для прохождения курса вам понадобятся базовые знания работы с Visual Studio и .NET Framework. Если вы новичок в этих областях, мы рекомендуем вам сначала пройти наши вводные курсы по Visual Studio и .NET Framework, которые вы можете найти на нашем сайте.</p>
+                    <button onclick="location.href='/Main.html'" type="button" class="back-button">
+                        Назад
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div id="Lesson1">
+                    <h1>Урок 1: Основы синтаксиса C#</h1>
+                    <p>В этом уроке вы узнаете, как писать простые программы на C#. Вы узнаете, как создавать переменные, константы, операторы, выражения, комментарии, типы данных, преобразования и ввод-вывод данных.</p>
+                
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3MireZUB3Hw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Напишите программу, которая выводит на экран "Hello, world!"</li>
+                            <li>Напишите программу, которая запрашивает у пользователя его имя и возраст и выводит на экран "Привет, {имя}, тебе {возраст} лет."</li>
+                            <li>Напишите программу, которая проверяет, является ли введенное число четным или нечетным.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Lesson2'">Далее</button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div id="Lesson2">
+                    <h1>Урок 2: Методы и параметры в C#</h1>
+                    <p>В этом уроке вы узнаете, как создавать и использовать методы в C#. Методы - это блоки кода, которые выполняют определенную задачу и могут быть вызваны из других частей программы. Вы узнаете, как определять и вызывать методы, как передавать параметры в методы, как возвращать значения из методов и как использовать разные виды параметров.</p>
+                
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Xk8vRnm6xtc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Напишите метод, который принимает два числа и возвращает их сумму.</li>
+                            <li>Напишите метод, который принимает массив чисел и возвращает их среднее арифметическое.</li>
+                            <li>Напишите метод, который принимает строку и возвращает ее в обратном порядке.</li>
+                            <li>Напишите метод, который принимает число n и возвращает n-е число Фибоначчи.</li>
+                            <li>Напишите метод, который принимает число n и выводит на экран n-й ряд треугольника Паскаля.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Lesson3'">Далее</button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div id="Lesson3">
+                    <h1>Урок 3: Скрипты движения и прыжка в C#</h1>
+                    <p>В этом уроке вы узнаете, как создавать скрипты движения и прыжка для персонажей в играх на C#. Вы узнаете, как использовать компоненты Rigidbody, Collider, Animator и Input, как обрабатывать столкновения и триггеры, как реализовать гравитацию и силу прыжка, как анимировать персонажа в зависимости от состояния и направления движения.</p>
+                
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/sX0hhZT9wDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Создайте новый проект в Unity и импортируйте стандартный пакет Character Controller.</li>
+                            <li>Добавьте на сцену плоскость и персонажа из пакета Character Controller.</li>
+                            <li>Добавьте на персонажа компоненты Rigidbody, Capsule Collider и Animator.</li>
+                            <li>Настройте параметры Rigidbody и Capsule Collider так, чтобы персонаж не проваливался сквозь плоскость и не вращался при столкновениях.</li>
+                            <li>Создайте новый скрипт на C# с именем PlayerMovement и добавьте его на персонажа.</li>
+                            <li>В скрипте PlayerMovement объявите переменные для хранения ссылок на компоненты Rigidbody, Animator и Input, а также для хранения скорости движения, силы прыжка и состояния земли.</li>
+                            <li>В методе Start инициализируйте переменные, получая ссылки на компоненты с помощью метода GetComponent и на Input с помощью класса InputManager.</li>
+                            <li>В методе FixedUpdate реализуйте логику движения и прыжка персонажа, используя методы AddForce, MovePosition и SetBool.</li>
+                            <li>В методе OnCollisionEnter проверяйте, касается ли персонаж земли, и устанавливайте соответствующее значение переменной состояния земли.</li>
+                            <li>Сохраните и запустите скрипт, проверьте, как работает движение и прыжок персонажа в игре.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Lesson4'">Далее</button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div id="Lesson4">
+                    <h1>Урок 4: Основы коллекций и циклов в C#</h1>
+                    <p>В этом уроке вы узнаете, как работать с коллекциями и циклами в C#. Коллекции - это структуры данных, которые хранят несколько значений одного или разных типов. Циклы - это конструкции, которые позволяют повторять один и тот же блок кода несколько раз с разными значениями. Вы узнаете, как создавать и использовать массивы, списки, словари, стеки, очереди, foreach, for и while.</p>
+                
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/e0ajLLezBPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Напишите программу, которая создает массив из 10 случайных чисел и выводит на экран их сумму, среднее, минимальное и максимальное значения.</li>
+                            <li>Напишите программу, которая создает список из 10 строк, вводимых пользователем, и выводит на экран только те строки, которые начинаются с буквы "А".</li>
+                            <li>Напишите программу, которая создает словарь, в котором ключами являются названия стран, а значениями - их столицы, и выводит на экран столицу по введенному пользователем названию страны.</li>
+                            <li>Напишите программу, которая создает стек из 10 чисел, вводимых пользователем, и выводит на экран их в обратном порядке, используя метод Pop.</li>
+                            <li>Напишите программу, которая создает очередь из 10 строк, вводимых пользователем, и выводит на экран их в том же порядке, используя метод Dequeue.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Lesson5'">Далее</button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div id="Lesson5">
+                    <h1>Урок 5: Основы обработки исключений и файлов в C#</h1>
+                    <p>В этом уроке вы узнаете, как работать с исключениями и файлами в C#. Исключения - это ошибки, которые возникают во время выполнения программы и могут привести к ее аварийному завершению. Файлы - это объекты, которые хранят данные на диске и могут быть считаны или записаны программой. Вы узнаете, как использовать конструкции try-catch-finally, throw, классы Exception, File, StreamReader и StreamWriter.</p>
+                
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/6gIbmLWZBpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Напишите программу, которая запрашивает у пользователя два числа и выводит на экран их частное, обрабатывая возможные исключения, такие как деление на ноль, неверный формат ввода и переполнение.</li>
+                            <li>Напишите программу, которая создает свой собственный класс исключения MyException и генерирует его, если пользователь вводит отрицательное число, а затем перехватывает и выводит на экран сообщение об ошибке.</li>
+                            <li>Напишите программу, которая считывает текст из файла input.txt и выводит его на экран, обрабатывая возможные исключения, такие как отсутствие файла, недостаток прав доступа и ошибки ввода-вывода.</li>
+                            <li>Напишите программу, которая записывает текст, введенный пользователем, в файл output.txt, обрабатывая возможные исключения, такие как недостаток места на диске, недостаток прав доступа и ошибки ввода-вывода.</li>
+                            <li>Напишите программу, которая копирует содержимое одного файла в другой, обрабатывая возможные исключения, такие как отсутствие файла, недостаток прав доступа и ошибки ввода-вывода.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Intro'">Вернуться к началу</button>
+                </div>
+            </div>
+        </div>
+        <br>            
+    </div>
+</body>
+</html>

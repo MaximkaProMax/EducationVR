@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    font-family: Montserrat, sans-serif;
+    padding: 20px 0; /*Добавляем отступы сверху и снизу*/
+    background-image: url("/Image/pattern-dots-square-.png");
+    background-size: 40vh;
+    background-image: 10%;
+    background-repeat: repeat;
+}
+
+.title-card {
+    background: linear-gradient(to right, #050505b9, #000000b7);  /* background: linear-gradient(to right, #ff9966, #ff5e62); /* Добавляем градиент */
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+}
+
+.card {
+    box-shadow: 0px 0px 15px 0 rgba(28, 28, 28, 0.2);
+    transition: 0.3s;
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: #ffffff1c;
+    backdrop-filter: blur(3px);
+}
+
+h1, .subtitle { /* Применяем стили и к h1, и к subtitle */
+    text-align: center;
+    color: white; /* Изменяем цвет текста на белый */
+}
+
+.subtitle { /* Добавляем стили для subtitle */
+    font-size: 18px; /* Уменьшаем размер шрифта */
+    font-weight: normal; /* Устанавливаем нормальное начертание */
+}
+
+h3 {
+    text-align: center;
+    color: white; /* Изменяем цвет текста на белый */
+}
+
+form {
+    margin: 0 auto;
+    width: 80%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 20px auto;
+}
+
+#results {
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+    size-adjust: 20%;
+}
+
+.submit-button {
+    display: inline-block;
+    margin: 0 0 20px 20px ;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #007aff;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0068d6;
+}
+
+.back-button {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #9e9e9e;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.back-button:hover {
+    background-color: #7c7c7c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('cursor.png'), pointer;
+}

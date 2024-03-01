@@ -1,0 +1,166 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unity Engine</title>
+    <!-- Подключаем шрифт Montserrat с Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+    <!-- Подключаем файл со стилями CSS -->
+    <link rel="stylesheet" href="/Design/ProgaMasha.css">
+    <link rel="stylesheet" href="/Design/Button.css">
+    <script src="/Script/Button.js"></script>
+    <link rel="shortcut icon" href="/Image/Logo.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <button onclick="location.href='/Main.html'" style="background-color: #ffffff00; border: 0;"> <!-- Вернуться на гл. страницу через клик по картинке-->
+                <img src="/Image/JoyStick2.png" alt="Логотип" class="logo">    
+            </button>
+            <div class="dropdown">
+                <div class="dropdown">
+                    <button onclick="myFunction2()" class="dropbtn">Тесты</button>
+                    <div id="myDropdown2" class="dropdown-content">
+                    <ul>
+                        <li><a href="/Page/GitHub.html">GitHub</a></li>
+                        <li><a href="/Page/Lang.html">C#</a></li>
+                        <li><a href="/Page/Unity.html">Unity</a></li>
+                    </ul>
+                    </div>
+                </div> 
+                <div class="dropdown">    
+                    <button onclick="myFunction()" class="dropbtn">Темы</button>
+                    <div id="myDropdown" class="dropdown-content">
+                    <ul>
+                        <li><a href="/Page/Slider/Unity.html">Unity</a></li>
+                        <li><a href="/Page/Slider/GitHub.html">GitHub</a></li>
+                        <li><a href="/Page/Slider/Lang.html">C#</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="card">
+                <div id="Intro">
+                    <h1>Как работать в игровом движке Unity</h1>
+                    <p>В этом курсе вы научитесь, как использовать Unity, один из самых популярных и мощных игровых движков для создания интерактивных 3D-приложений. Вы узнаете, как создавать проекты, сцены, игровые объекты, компоненты, скрипты, анимации, звуки, интерфейсы и логику игры. Вы также узнаете, как экспортировать свои приложения на разные платформы, такие как Windows, Mac, Android, iOS, Web и другие.</p>
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xAtoU-FnC7o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>Курс состоит из нескольких уроков, в каждом из которых вы будете изучать новые аспекты работы с Unity. В конце каждого урока вы найдете задания, которые помогут вам практиковать использование Unity и создание игровых приложений. Также вы сможете получить доступ к проектам и ресурсам, которые использовались в уроке. Для прохождения курса вам понадобятся базовые знания работы с 3D-графикой и программированием. Если вы новичок в этих областях, мы рекомендуем вам сначала пройти наши вводные курсы по 3D-моделированию и C#, которые вы можете найти на нашем сайте.</p>
+                    <button onclick="location.href='/Main.html'" type="button" class="back-button">
+                        Назад
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div id="Lesson1">
+                    <h1>Урок 1: Основы создания 2D-платформера в Unity</h1>
+                    <p>В этом уроке вы узнаете, что такое Unity и как работать с этим игровым движком для создания 2D-платформеров. Вы узнаете, как создавать проекты, сцены, 2D-игровые объекты, компоненты, скрипты, ассеты, префабы и материалы. Вы также узнаете, как использовать редактор Unity, инспектор, иерархию, сцену, игру, консоль и ассет-стор для 2D-игр.</p>
+
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/sX0hhZT9wDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Создайте новый проект в Unity и назовите его "MyFirst2DPlatformer".</li>
+                            <li>Добавьте на сцену 2D-игровой объект Sprite и назовите его "Player".</li>
+                            <li>Добавьте на игровой объект Player компонент Rigidbody2D и настройте его параметры для движения в 2D-пространстве.</li>
+                            <li>Создайте новый скрипт на C# с именем "PlayerMovement" и добавьте его на игровой объект Player.</li>
+                            <li>В скрипте PlayerMovement напишите код, который позволяет управлять игровым объектом Player с помощью клавиатуры для движения по платформам.</li>
+                            <li>Сохраните и запустите сцену, проверьте, как работает движение игрового объекта Player в вашем 2D-платформере.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Lesson2'">Далее</button>
+                </div>
+            </div>
+            <br>
+            <div class="card"> 
+                <div id="Lesson2">
+                    <h1>Урок 2: Создании анимации персонажа в Unity</h1>
+                    <p>В этом уроке вы узнаете, как работать с анимацией в 2D-платформерах на Unity. Вы узнаете, как использовать компоненты Animator, Animation, Sprite и как создавать и редактировать анимации для 2D-игр.</p>
+
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qHFsgJVyO2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Добавьте на игровой объект Player компонент Animator и настройте его параметры.</li>
+                            <li>Создайте новый контроллер анимации с именем "PlayerAnimation" и добавьте его на компонент Animator.</li>
+                            <li>Создайте новый клип анимации с именем "Idle" и добавьте его на контроллер анимации.</li>
+                            <li>В редакторе анимации настройте кадры анимации Idle, используя спрайты из пакета Character Controller.</li>
+                            <li>Создайте новый клип анимации с именем "Run" и добавьте его на контроллер анимации.</li>
+                            <li>В редакторе анимации настройте кадры анимации Run, используя спрайты из пакета Character Controller.</li>
+                            <li>Создайте новый клип анимации с именем "Jump" и добавьте его на контроллер анимации.</li>
+                            <li>В редакторе анимации настройте кадры анимации Jump, используя спрайты из пакета Character Controller.</li>
+                            <li>Создайте новый параметр анимации с именем "Speed" и типом Float.</li>
+                            <li>Создайте новый параметр анимации с именем "IsGrounded" и типом Bool.</li>
+                            <li>Создайте переходы между клипами анимации и настройте их условия, используя параметры Speed и IsGrounded.</li>
+                            <li>В скрипте PlayerMovement напишите код, который устанавливает значения параметров Speed и IsGrounded в зависимости от состояния игрового объекта Player.</li>
+                            <li>Сохраните и запустите сцену, проверьте, как работает анимация игрового объекта Player в вашем 2D-платформере.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Lesson3'">Далее</button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div id="Lesson3">
+                    <h1>Урок 3: Основы звука в 2D-платформере на Unity</h1>
+                    <p>В этом уроке вы узнаете, как работать со звуком в 2D-платформерах на Unity. Вы узнаете, как использовать компоненты AudioSource, AudioClip, AudioListener и AudioMixer. Вы также узнаете, как настраивать параметры звука, как использовать звуковые эффекты и музыку в контексте 2D-игр.</p>
+
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/40qj3ZgR6X4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Добавьте на игровой объект Player компонент AudioSource и настройте его параметры.</li>
+                            <li>Создайте новый аудио клип с именем "JumpSound" и добавьте его на компонент AudioSource.</li>
+                            <li>В скрипте PlayerMovement напишите код, который воспроизводит звук прыжка при нажатии на пробел.</li>
+                            <li>Создайте новый аудио клип с именем "StepSound" и добавьте его на компонент AudioSource.</li>
+                            <li>В скрипте PlayerMovement напишите код, который воспроизводит звук шага при движении игрока.</li>
+                            <li>Создайте новый аудио клип с именем "BackgroundMusic" и добавьте его на компонент AudioSource, который будет воспроизводить фоновую музыку.</li>
+                            <li>Сохраните и запустите сцену, проверьте, как работает звук в вашем 2D-платформере.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Lesson4'">Далее</button>
+                </div>    
+            </div>
+            <br>
+            <div class="card">
+                <div id="Lesson4">
+                    <h1>Урок 4: Основы 2D-графики и освещения в Unity</h1>
+                    <p>В этом уроке вы узнаете, как работать с 2D-графикой и освещением в Unity. Вы узнаете, как использовать компоненты Camera, Light, Material, Shader, Texture, Sprite и Particle System. Вы также узнаете, как настраивать рендеринг, тени, отражения и пост-эффекты в контексте 2D-игр.</p>
+
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/FPNESgLW4pA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Добавьте на сцену игровой объект Light и настройте его параметры для создания атмосферы в вашем 2D-платформере.</li>
+                            <li>Создайте новый материал с именем "Platform" и настройте его параметры для создания платформ в вашей игре.</li>
+                            <li>Примените материал Platform на игровой объект Sprite, который будет представлять платформы в вашей игре.</li>
+                            <li>Создайте новый спрайт с именем "Player" и настройте его параметры для создания игрового персонажа.</li>
+                            <li>Добавьте на сцену игровой объект Sprite и примените на него спрайт Player.</li>
+                            <li>Сохраните и запустите сцену, проверьте, как работает 2D-графика и освещение в вашей игре.</li>
+                        </ul>
+                    </p>
+
+                    <button onclick="window.location.href='#Intro'">Вернуться к началу</button>
+                </div>    
+            </div>
+            <br>
+        </div>                        
+    </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Система контроля версий GitHub</title>
+    <!-- Подключаем шрифт Montserrat с Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+    <!-- Подключаем файл со стилями CSS -->
+    <link rel="stylesheet" href="/Design/ProgaMasha.css">
+    <link rel="stylesheet" href="/Design/Button.css">
+    <script src="/Script/Button.js"></script>
+    <link rel="shortcut icon" href="/Image/Logo.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <button onclick="location.href='/Main.html'" style="background-color: #ffffff00; border: 0;"> <!-- Вернуться на гл. страницу через клик по картинке-->
+                <img src="/Image/JoyStick2.png" alt="Логотип" class="logo">    
+            </button>
+            <div class="dropdown">
+                <div class="dropdown">
+                    <button onclick="myFunction2()" class="dropbtn">Тесты</button>
+                    <div id="myDropdown2" class="dropdown-content">
+                    <ul>
+                        <li><a href="/Page/GitHub.html">GitHub</a></li>
+                        <li><a href="/Page/Lang.html">C#</a></li>
+                        <li><a href="/Page/Unity.html">Unity</a></li>
+                    </ul>
+                    </div>
+                </div> 
+                <div class="dropdown">    
+                    <button onclick="myFunction()" class="dropbtn">Темы</button>
+                    <div id="myDropdown" class="dropdown-content">
+                    <ul>
+                        <li><a href="/Page/Slider/Unity.html">Unity</a></li>
+                        <li><a href="/Page/Slider/GitHub.html">GitHub</a></li>
+                        <li><a href="/Page/Slider/Lang.html">C#</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="card">
+                <div id="Intro">
+                    <h1>Как работать в GitHub</h1>
+                    <p>В этом курсе вы научитесь, как использовать GitHub, одну из самых популярных и мощных платформ для совместной разработки проектов. Вы узнаете, как создавать репозитории, вносить изменения, синхронизировать код, работать с ветками и слияниями, а также как взаимодействовать с другими разработчиками.</p>
+
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EeARyFrZsnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>Курс состоит из нескольких уроков, в каждом из которых вы будете изучать новые аспекты работы с GitHub. В конце каждого урока вы найдете задания, которые помогут вам практиковать использование GitHub и совместную разработку проектов. Также вы сможете получить доступ к репозиториям и материалам, которые использовались в уроке.
+                        Для прохождения курса вам понадобятся базовые знания работы с командной строкой и системами контроля версий. Если вы новичок в этих областях, мы рекомендуем вам сначала пройти наши вводные курсы по командной строке и Git, которые вы можете найти на нашем сайте.</p>
+                    <button onclick="location.href='/Main.html'" type="button" class="back-button">
+                        Назад
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div id="Lesson1">
+                    <h1>Урок 1: Как создать и настроить репозиторий на GitHub</h1>
+                    <p>В этом уроке вы узнаете, что такое репозиторий и как его создать на GitHub. Репозиторий - это место, где хранятся и управляются файлы вашего проекта. Вы также научитесь, как настроить репозиторий, добавить описание, лицензию, README файл и игнорировать ненужные файлы.</p>
+                
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9dkzbSnN2FQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Создайте свой первый репозиторий на GitHub с именем hello-world.</li>
+                            <li>Добавьте краткое описание вашего репозитория в поле Description.</li>
+                            <li>Создайте файл README.md в вашем репозитории и напишите в нем "Hello, world!"</li>
+                            <li>Создайте файл .gitignore в вашем репозитории и добавьте в него "*.txt", чтобы игнорировать все текстовые файлы.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Lesson2'">Далее</button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div id="Lesson2">
+                    <h1>Урок 2: Как вносить изменения в репозиторий на GitHub</h1>
+                    <p>В этом уроке вы узнаете, как вносить изменения в файлы вашего репозитория на GitHub. Изменения - это действия, которые вы выполняете над файлами, такие как создание, редактирование, удаление и перемещение. Вы также научитесь, как фиксировать изменения, писать осмысленные сообщения коммитов и просматривать историю коммитов.</p>
+                
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/TC5UXN4dHGM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Отредактируйте файл README.md в вашем репозитории и добавьте в него "This is my first repository on GitHub."</li>
+                            <li>Создайте новый файл index.html в вашем репозитории и напишите в нем базовую разметку HTML.</li>
+                            <li>Удалите файл .gitignore из вашего репозитория.</li>
+                            <li>Переместите файл index.html в папку src, которую вы создадите в вашем репозитории.</li>
+                            <li>Зафиксируйте все изменения в вашем репозитории с сообщением "Add index.html and edit README.md"</li>
+                            <li>Просмотрите историю коммитов в вашем репозитории и убедитесь, что все изменения отражены.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Lesson3'">Далее</button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div id="Lesson3">
+                    <h1>Урок 3: Как синхронизировать код между локальным и удаленным репозиторием на GitHub</h1>
+                    <p>В этом уроке вы узнаете, как синхронизировать код между локальным и удаленным репозиторием на GitHub. Локальный репозиторий - это копия вашего проекта, которая хранится на вашем компьютере. Удаленный репозиторий - это копия вашего проекта, которая хранится на GitHub. Вы также научитесь, как клонировать репозиторий, отправлять и получать изменения, и решать конфликты.</p>
+                            
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/mcrpYaYbNGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Клонируйте ваш репозиторий hello-world на свой локальный компьютер с помощью команды `git clone` и URL вашего репозитория, который вы можете скопировать с GitHub.</li>
+                            <li>Откройте папку с вашим локальным репозиторием в любом текстовом редакторе и отредактируйте файл README.md, добавив в него "This is my first repository on GitHub."</li>
+                            <li>Отправьте изменения в ваш локальный репозиторий с помощью команды `git commit -m "Edit README.md"`.</li>
+                            <li>Отправьте изменения в ваш удаленный репозиторий на GitHub с помощью команды `git push`.</li>
+                            <li>Откройте ваш репозиторий на GitHub и убедитесь, что изменения отображаются.</li>
+                            <li>Отредактируйте файл README.md в вашем репозитории на GitHub, добавив в него "This is a change made on GitHub."</li>
+                            <li>Получите изменения из вашего удаленного репозитория на GitHub в ваш локальный репозиторий с помощью команды `git pull`.</li>
+                            <li>Откройте файл README.md в вашем локальном репозитории и убедитесь, что изменения отображаются.</li>
+                            <li>Создайте конфликт в файле README.md, добавив в него разные строки в вашем локальном и удаленном репозитории.</li>
+                            <li>Попробуйте отправить изменения из вашего локального репозитория на GitHub с помощью команды `git push` и увидите, что произойдет.</li>
+                            <li>Попробуйте получить изменения из вашего удаленного репозитория на GitHub в ваш локальный репозиторий с помощью команды `git pull` и увидите, как решить конфликт.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Lesson4'">Далее</button>
+                </div>
+            </div>
+            <br>            
+            <div class="card">
+                <div id="Lesson4">
+                    <h1>Урок 4: Как работать с ветками на GitHub</h1>
+                    <p>В этом уроке вы узнаете, что такое ветки и как с ними работать на GitHub. Ветки - это параллельные версии вашего проекта, которые позволяют вам вносить изменения без влияния на основную ветвь master. Вы также научитесь, как создавать, переключаться, сливать и удалять ветки.</p>
+                
+                    <div style="display: flex; justify-content: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Lf8arzsq__U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen; style="border-radius: 10px;"></iframe>
+                    </div>
+                    <br> <br>
+                    <p>После просмотра видео вы сможете выполнить следующие задания:
+                        <ul>
+                            <li>Создайте новую ветку в вашем локальном репозитории с именем feature и переключитесь на нее с помощью команды `git checkout -b feature`.</li>
+                            <li>Отредактируйте файл index.html в вашей ветке feature, добавив в него тег `<strong>This is a new feature.</strong>`.</li>
+                            <li>Отправьте изменения в ваш локальный репозиторий с помощью команды `git commit -m "Add new feature"`.</li>
+                            <li>Отправьте изменения в ваш удаленный репозиторий на GitHub с помощью команды `git push -u origin feature`.</li>
+                            <li>Откройте ваш репозиторий на GitHub и убедитесь, что появилась новая ветка feature.</li>
+                            <li>Создайте запрос на слияние (pull request) из ветки feature в ветку master на GitHub и добавьте описание вашего изменения.</li>
+                            <li>Просмотрите и одобрите запрос на слияние на GitHub и убедитесь, что изменения из ветки feature добавились в ветку master.</li>
+                            <li>Удалите ветку feature из вашего локального и удаленного репозитория с помощью команд `git branch -d feature` и `git push origin --delete feature`.</li>
+                        </ul>
+                    </p>
+                    <button onclick="window.location.href='#Intro'">Вернуться к началу</button>
+                </div>                    
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+</html>

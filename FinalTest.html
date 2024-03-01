@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C#, Unity и GitHub Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        #question {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #options {
+            list-style: none;
+            padding: 0;
+        }
+
+        #options li {
+            margin-bottom: 10px;
+        }
+
+        #options li input {
+            margin-right: 10px;
+        }
+
+        #submit {
+            display: block;
+            width: 100px;
+            height: 40px;
+            margin: 20px auto;
+            background-color: #333333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>C#, Unity и GitHub Quiz</h1>
+        <div id="quiz">
+            <p id="question"></p>
+            <ul id="options"></ul>
+            <button id="submit">Submit</button>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script>
+        // Список вопросов и ответов
+        var questions = [
+            {
+                question: "Какой оператор используется для объединения условий в логическое И в C#?",
+                options: ["&&", "||", "&", "|"],
+                answer: 0
+            },
+            {
+                question: "Какой компонент Unity позволяет добавлять скрипты к игровым объектам?",
+                options: ["Script", "Behaviour", "MonoBehaviour", "Component"],
+                answer: 2
+            },
+            {
+                question: "Какой командой Git можно отправить локальные изменения в удаленный репозиторий?",
+                options: ["git push", "git pull", "git commit", "git merge"],
+                answer: 0
+            },
+            {
+                question: "Какой метод C# позволяет выводить текст в консоль Unity?",
+                options: ["Console.WriteLine", "Debug.Log", "Print", "Write"],
+                answer: 1
+            },
+            {
+                question: "Какой режим работы Unity позволяет тестировать игру в редакторе?",
+                options: ["Play", "Edit", "Test", "Preview"],
+                answer: 0
+            },
+            {
+                question: "Какой тип данных используется для хранения целых чисел в C#?",
+                options: ["int", "float", "double", "string"],
+                answer: 0
+            },
+            {
+                question: "Какой компонент Unity позволяет добавлять физику к игровым объектам?",
+                options: ["Rigidbody", "Collider", "Transform", "SpriteRenderer"],
+                answer: 0
+            },
+            {
+                question: "Какой командой Git можно получить последние изменения из удаленного репозитория?",
+                options: ["git push", "git pull", "git commit", "git merge"],
+                answer: 1
+            },
+            {
+                question: "Какой оператор C# позволяет сравнивать два значения на равенство?",
+                options: ["=", "==", "!=", "<>"],
+                answer: 1
+            },
+            {
+                question: "Какой компонент Unity позволяет добавлять звуки к игровым объектам?",
+                options: ["AudioSource", "AudioClip", "AudioListener", "AudioMixer"],
+                answer: 0
+            },
+            {
+                question: "Какой тип данных используется для хранения дробных чисел в C#?",
+                options: ["int", "float", "double", "string"],
+                answer: 1
+            },
+            {
+                question: "Какой компонент Unity позволяет определять столкновения между игровыми объектами?",
+                options: ["Rigidbody", "Collider", "Transform", "SpriteRenderer"],
+                answer: 1
+            },
+            {
+                question: "Какой командой Git можно создать новую ветку в репозитории?",
+                options: ["git branch", "git checkout", "git clone", "git init"],
+                answer: 0
+            },
+            {
+                question: "Какой оператор C# позволяет выполнить действие в зависимости от значения переменной?",
+                options: ["if", "switch", "for", "while"],
+                answer: 1
+            },
+            {
+                question: "Какой компонент Unity позволяет изменять положение, поворот и масштаб игровых объектов?",
+                options: ["Rigidbody", "Collider", "Transform", "SpriteRenderer"],
+                answer: 2
+            },
+            {
+                question: "Какой тип данных используется для хранения текстовых значений в C#?",
+                options: ["int", "float", "double", "string"],
+                answer: 3
+            },
+            {
+                question: "Какой компонент Unity позволяет отображать спрайты на игровых объектах?",
+                options: ["Rigidbody", "Collider", "Transform", "SpriteRenderer"],
+                answer: 3
+            },
+            {
+                question: "Какой командой Git можно переключиться на другую ветку в репозитории?",
+                options: ["git branch", "git checkout", "git clone", "git init"],
+                answer: 1
+            },
+            {
+                question: "Какой оператор C# позволяет повторять действие определенное количество раз?",
+                options: ["if", "switch", "for", "while"],
+                answer: 2
+            },
+            {
+                question: "Какой компонент Unity позволяет управлять камерой в игре?",
+                options: ["Camera", "Light", "Canvas", "Animator"],
+                answer: 0
+            },
+            {
+                question: "Какой тип данных используется для хранения логических значений в C#?",
+                options: ["bool", "bit", "binary", "logic"],
+                answer: 0
+            },
+            {
+                question: "Какой компонент Unity позволяет добавлять свет в игре?",
+                options: ["Camera", "Light", "Canvas", "Animator"],
+                answer: 1
+            },
+            {
+                question: "Какой командой Git можно скопировать удаленный репозиторий на локальный компьютер?",
+                options: ["git branch", "git checkout", "git clone", "git init"],
+                answer: 2
+            },
+            {
+                question: "Какой оператор C# позволяет повторять действие пока выполняется условие?",
+                options: ["if", "switch", "for", "while"],
+                answer: 3
+            },
+            {
+                question: "Какой компонент Unity позволяет добавлять пользовательский интерфейс в игре?",
+                options: ["Camera", "Light", "Canvas", "Animator"],
+                answer: 2
+            },
+            {
+                question: "Какой тип данных используется для хранения символов в C#?",
+                options: ["char", "byte", "short", "long"],
+                answer: 0
+            },
+            {
+                question: "Какой компонент Unity позволяет добавлять анимацию к игровым объектам?",
+                options: ["Camera", "Light", "Canvas", "Animator"],
+                answer: 3
+            },
+            {
+                question: "Какой командой Git можно создать новый локальный репозиторий?",
+                options: ["git branch", "git checkout", "git clone", "git init"],
+                answer: 3
+            },
+            {
+                question: "Какой оператор C# позволяет объявлять константные значения, которые не могут быть изменены?",
+                options: ["var", "const", "static", "readonly"],
+                answer: 1
+            },
+            {
+                question: "Какой компонент Unity позволяет создавать и управлять сценами в игре?",
+                options: ["SceneManager", "SceneView", "SceneLoader", "SceneBuilder"],
+                answer: 0
+            },
+            {
+                question: "Какой командой Git можно объединить две ветки в репозитории?",
+                options: ["git branch", "git checkout", "git clone", "git merge"],
+                answer: 3
+            },
+            {
+                question: "Какой оператор C# позволяет вызывать методы и свойства родительского класса из дочернего класса?",
+                options: ["this", "base", "super", "parent"],
+                answer: 1
+            },
+            {
+                question: "Какой компонент Unity позволяет создавать и управлять частицами в игре?",
+                options: ["ParticleSystem", "ParticleEmitter", "ParticleRenderer", "ParticleManager"],
+                answer: 0
+            }
+        ];
+
+        // Переменные для хранения текущего индекса вопроса, выбранного ответа и количества правильных ответов
+        var currentQuestion = 0;
+        var selectedOption = -1;
+        var score = 0;
+
+        // Ссылки на элементы HTML
+        var questionElement = document.getElementById("question");
+        var optionsElement = document.getElementById("options");
+        var submitButton = document.getElementById("submit");
+        var resultElement = document.getElementById("result");
+
+        // Функция для отображения вопроса и вариантов ответа
+        function displayQuestion() {
+            // Получить текущий вопрос и ответы
+            var question = questions[currentQuestion];
+            var options = question.options;
+
+            // Очистить предыдущие варианты ответа
+            optionsElement.innerHTML = "";
+
+            // Установить текст вопроса
+            questionElement.textContent = question.question;
+
+            // Создать элементы списка для вариантов ответа
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                var li = document.createElement("li");
+                li.innerHTML = "<input type='radio' name='option' value='" + i + "'>" + option;
+                optionsElement.appendChild(li);
+            }
+
+            // Сбросить выбранный ответ
+            selectedOption = -1;
+        }
+
+        // Функция для проверки ответа
+        function checkAnswer() {
+            // Получить выбранный вариант ответа
+            var radios = document.getElementsByName("option");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    selectedOption = parseInt(radios[i].value);
+                    break;
+                }
+            }
+
+            // Если ничего не выбрано, показать предупреждение
+            if (selectedOption == -1) {
+                alert("Please select an option");
+                return;
+            }
+
+            // Если выбранный ответ совпадает с правильным, увеличить счет
+            var question = questions[currentQuestion];
+            var answer = question.answer;
+            if (selectedOption == answer) {
+                score++;
+            }
+
+            // Перейти к следующему вопросу или показать результат
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                displayQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        // Функция для отображения результата
+        function showResult() {
+            // Скрыть элементы викторины
+            questionElement.style.display = "none";
+            optionsElement.style.display = "none";
+            submitButton.style.display = "none";
+
+            // Показать элемент результата
+            resultElement.style.display = "block";
+            resultElement.textContent = "Your score: " + score + " / " + questions.length;
+        }
+
+        // Добавить обработчик события для кнопки отправки
+        submitButton.addEventListener("click", checkAnswer);
+
+        // Отобразить первый вопрос при загрузке страницы
+        displayQuestion();
+    </script>
+</body>
+</html>

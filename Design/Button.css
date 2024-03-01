@@ -1,0 +1,61 @@
+/* Кнопка для открытия выпадающего списка */
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+  }
+  
+  /* Кнопка при наведении и фокусе */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* Контейнер для выпадающего списка */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown2 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+  /* Содержимое выпадающего списка (скрыто по умолчанию) */
+  .dropdown-content {
+    display: none;
+    position: absolute; /* Изменено с static на absolute */
+    right: 0; /* Добавлено для выравнивания по правому краю */
+    background-color: #0037465b;
+    min-width: 16px;
+    margin: 0 10px 0 0;
+    box-shadow: 0px 0px 5px 0 rgba(28, 28, 28, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.212);
+    z-index: 1;
+  }
+  
+  
+  /* Ссылки внутри выпадающего списка */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Изменение цвета ссылок при наведении */
+  .dropdown-content a:hover {
+    background-color: #ffffff57;
+  }
+  
+  /* Показать выпадающий список при клике на кнопку */
+  .show {display: block;}
+  
